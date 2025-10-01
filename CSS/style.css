@@ -1,0 +1,524 @@
+/* 
+    Colores
+    Morado Base #6f2dbd
+    Morado Hover #a663cc
+*/
+
+/* --- Estilos Generales --- */
+body {
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    overflow-x: hidden;
+    /* Evita el desbordamiento horizontal por las animaciones */
+}
+
+/* --- Encabezado y Pie de página --- */
+
+/* Estilos del Header */
+.header {
+    background-color: #fff;
+    height: 80px;
+    position: fixed;
+    /* Fija el header en la parte superior */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100%;
+}
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu-item {
+    margin: 0 15px;
+}
+
+.nav-menu-link {
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-menu-link:hover {
+    color: #6f2dbd;
+    /* Color cian al pasar el ratón */
+}
+
+/* Estilos del Menú Móvil (Hamburguesa) */
+.nav-toggle {
+    display: none;
+    /* Oculto en versión de escritorio */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #fff;
+    color: #000;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #6f2dbd;
+    transition: background-color 0.2s;
+}
+
+/* --- Contenedores y Secciones --- */
+.color-secundario {
+    background-color: #fcfcfc;
+}
+
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+.presentation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.presentation p {
+    margin: auto;
+    width: 85%;
+}
+
+.presentation div {
+    justify-content: center;
+    padding: 1rem;
+}
+
+#cv {
+    background-color: #6f2dbd;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+#cv a{
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.content-layout {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos se apilen en pantallas pequeñas */
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid #bdc3c7;
+    overflow: hidden;
+    width: 200px;
+}
+
+/*GALERÍA CONTENERDOR PRINCIPAL Y FLECHAS*/
+.carousel {
+    width: 95%;
+}
+
+.carousel__contenedor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carousel__anterior,
+.carousel__anterior__img,
+.carousel__anterior__ani,
+.carousel__siguiente,
+.carousel__siguiente__img,
+.carousel__siguiente__ani {
+    border: none;
+    background: none;
+    font-size: 35px;
+    line-height: normal;
+    color: #6f2dbd;
+    cursor: pointer;
+}
+
+.carousel__anterior:hover,
+.carousel__anterior__img:hover,
+.carousel__anterior__ani:hover,
+.carousel__siguiente:hover,
+.carousel__siguiente__img:hover,
+.carousel__siguiente__ani:hover {
+    border: none;
+    background: none;
+    font-size: 35px;
+    line-height: normal;
+    color: #a663cc;
+    cursor: pointer;
+}
+
+/*CARRUSEL*/
+
+.carousel__elemento {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+}
+
+.carousel__elemento iframe:hover {
+    transform: scale(1.02);
+    transform-origin: center;
+    box-shadow: 0px 0px 10px #333;
+}
+
+.carousel__lista {
+    display: flex;
+}
+
+.carousel__indicadores .glider-dot,
+.carousel__indicadores__img .glider-dot,
+.carousel__indicadores__ani .glider-dot {
+    display: block;
+    width: 20px;
+    height: 10px;
+    background-color: #a663cc;
+    opacity: .3;
+    border-radius: 10px;
+}
+
+.carousel__indicadores .glider-dot:hover,
+.carousel__indicadores__img .glider-dot:hover,
+.carousel__indicadores__ani .glider-dot:hover {
+    opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active,
+.carousel__indicadores__img .glider-dot.active,
+.carousel__indicadores__ani .glider-dot.active {
+    opacity: 1;
+}
+
+iframe {
+    border-radius: 2rem;
+    overflow-y: hidden;
+    width: 316px;
+    height: 404px;
+    margin: 134px 0px 0px 32px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* --- ✨ LA MAGIA DE LA ANIMACIÓN ✨ --- */
+
+/* Estado inicial: oculto */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    /* Mover el elemento 100% a la izquierda */
+    transition: all 1s;
+    /* Duración y suavidad de la transición */
+}
+
+/* Estado final: visible (se activa con JavaScript) */
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    /* Devolver el elemento a su posición original */
+}
+
+/* Animación para las tarjetas (para un efecto escalonado) */
+.card:nth-child(2) {
+    transition-delay: 200ms;
+    /* La segunda tarjeta aparece 200ms más tarde */
+}
+
+.card:nth-child(3) {
+    transition-delay: 400ms;
+    /* Y la tercera 400ms más tarde, si la hubiera */
+}
+
+.card:nth-child(4) {
+    transition-delay: 600ms;
+    /* Y la tercera 400ms más tarde, si la hubiera */
+}
+
+
+/* --- Efecto Hover (Bono)
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+} 
+    --- */
+
+/* --- Galería --- */
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* Espacio entre las imágenes */
+    justify-content: center;
+}
+
+.thumbnail {
+    flex: 1 1 250px;
+    /* Permite que las imágenes se ajusten */
+    max-width: 250px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra el espacio sin deformarse */
+    display: block;
+}
+
+/* Estilos para el Lightbox */
+.lightbox {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.90);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 5px;
+    animation: fadeIn 0.5s;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: #6f2dbd;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* --- Contenedor del Formulario --- */
+.contact-container {
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    width: auto;
+    max-width: 500px;
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el ancho total */
+}
+
+/* --- Títulos y Texto --- */
+.contact-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.contact-container p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* --- Campos del Formulario (Inputs y Textarea) --- */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #6f2dbd;
+    box-shadow: 0 0 0 3px rgba(204, 94, 255, 0.336);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* --- Botón de Envío --- */
+.submit-btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #6f2dbd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #a663cc;
+}
+
+
+/* Media Query para hacer el diseño responsivo */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 80px;
+        /* Debajo del header */
+        width: 100%;
+        padding: 20px 0;
+        background-color: #fff;
+        /* Un poco más oscuro */
+        height: calc(100% - 80px);
+        overflow-y: auto;
+
+        /* Efecto de ocultar/mostrar */
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-toggle {
+        display: block;
+        /* Visible en móvil */
+    }
+
+    /* Clase que se añade con JS para mostrar el menú */
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .presentation {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5rem 1rem;
+    }
+
+    footer {
+        display: grid;
+        text-align: center;
+        padding: 3rem 1rem;
+    }
+
+    iframe {
+    overflow: hidden;
+    width: 230px;
+    height: 230px;
+}
+}
