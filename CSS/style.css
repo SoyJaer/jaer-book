@@ -170,11 +170,13 @@ footer a:hover {
 /*GALERÍA CONTENERDOR PRINCIPAL Y FLECHAS*/
 .carousel {
     width: 95%;
+    align-content: center;
+    height: auto;
 }
 
 .carousel__contenedor {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -210,8 +212,8 @@ footer a:hover {
 
 .carousel__elemento {
     display: flex;
-    flex-wrap: wrap;
-    row-gap: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel__elemento iframe:hover {
@@ -249,10 +251,8 @@ footer a:hover {
 
 iframe {
     border-radius: 2rem;
-    overflow-y: hidden;
     width: 316px;
     height: 404px;
-    margin: 134px 0px 0px 32px;
 }
 
 img {
@@ -310,17 +310,17 @@ img {
 /* --- Galería --- */
 
 .gallery-container {
+    max-height: 100%;
+    width: 70%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    /* Espacio entre las imágenes */
-    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+    position: relative;
+    overflow: scroll;
 }
 
 .thumbnail {
-    flex: 1 1 250px;
-    /* Permite que las imágenes se ajusten */
-    max-width: 250px;
+    min-width: 250px;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -518,7 +518,7 @@ textarea.form-control {
 
     iframe {
     overflow: hidden;
-    width: 230px;
-    height: 230px;
+    width: 250px;
+    height: 300px;
 }
 }
