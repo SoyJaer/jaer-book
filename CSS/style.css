@@ -141,17 +141,23 @@ footer a:hover {
     border-radius: 150px;
 }
 
-#cv {
-    background-color: #6f2dbd;
-    padding: 1rem 2rem;
-    border-radius: 2rem;
+.redes {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#cv a{
-    font-size: 1rem;
-    color: #fff;
-    text-decoration: none;
+svg {
+    width: 50px;
+    margin-right: 1rem;
+    fill: #333;
 }
+
+svg:hover {
+    fill: #6f2dbd;
+}
+
 
 .content-layout {
     display: flex;
@@ -231,11 +237,11 @@ footer a:hover {
     border-radius: 10px;
 }
 
-.carousel__indicadores .glider-dot:hover,{
+.carousel__indicadores .glider-dot:hover {
     opacity: .5;
 }
 
-.carousel__indicadores .glider-dot.active,{
+.carousel__indicadores .glider-dot.active {
     opacity: 1;
 }
 
