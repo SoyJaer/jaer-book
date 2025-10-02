@@ -106,34 +106,39 @@ footer a:hover {
 
 /* --- Contenedores y Secciones --- */
 .color-secundario {
-    background-color: #fcfcfc;
+    background-color: #f8f8f8;
 }
 
 
 .section-container {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
     text-align: center;
 }
 
 .presentation {
+    width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
 
 .presentation p {
-    margin: auto;
-    width: 85%;
+    width: 90%;
 }
 
 .presentation div {
     justify-content: center;
     padding: 1rem;
+}
+
+.presentation img {
+    width: 300px;
+    border-radius: 150px;
 }
 
 #cv {
@@ -159,10 +164,9 @@ footer a:hover {
 
 .card {
     background: #fff;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border: 1px solid #bdc3c7;
     overflow: hidden;
     width: 200px;
 }
@@ -170,8 +174,6 @@ footer a:hover {
 /*GALERÍA CONTENERDOR PRINCIPAL Y FLECHAS*/
 .carousel {
     width: 95%;
-    align-content: center;
-    height: auto;
 }
 
 .carousel__contenedor {
@@ -181,11 +183,7 @@ footer a:hover {
 }
 
 .carousel__anterior,
-.carousel__anterior__img,
-.carousel__anterior__ani,
-.carousel__siguiente,
-.carousel__siguiente__img,
-.carousel__siguiente__ani {
+.carousel__siguiente {
     border: none;
     background: none;
     font-size: 35px;
@@ -195,11 +193,7 @@ footer a:hover {
 }
 
 .carousel__anterior:hover,
-.carousel__anterior__img:hover,
-.carousel__anterior__ani:hover,
-.carousel__siguiente:hover,
-.carousel__siguiente__img:hover,
-.carousel__siguiente__ani:hover {
+.carousel__siguiente:hover {
     border: none;
     background: none;
     font-size: 35px;
@@ -214,9 +208,11 @@ footer a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 
 .carousel__elemento iframe:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: scale(1.02);
     transform-origin: center;
     box-shadow: 0px 0px 10px #333;
@@ -226,34 +222,28 @@ footer a:hover {
     display: flex;
 }
 
-.carousel__indicadores .glider-dot,
-.carousel__indicadores__img .glider-dot,
-.carousel__indicadores__ani .glider-dot {
+.carousel__indicadores .glider-dot{
     display: block;
     width: 20px;
     height: 10px;
     background-color: #a663cc;
-    opacity: .3;
+    opacity: 1;
     border-radius: 10px;
 }
 
-.carousel__indicadores .glider-dot:hover,
-.carousel__indicadores__img .glider-dot:hover,
-.carousel__indicadores__ani .glider-dot:hover {
+.carousel__indicadores .glider-dot:hover,{
     opacity: .5;
 }
 
-.carousel__indicadores .glider-dot.active,
-.carousel__indicadores__img .glider-dot.active,
-.carousel__indicadores__ani .glider-dot.active {
+.carousel__indicadores .glider-dot.active,{
     opacity: 1;
 }
 
 iframe {
     border-radius: 2rem;
     border: none;
-    width: 316px;
-    height: 404px;
+    width: auto;
+    height: 400px;
 }
 
 img {
