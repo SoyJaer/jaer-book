@@ -148,13 +148,12 @@ footer a:hover {
     align-items: center;
 }
 
-svg {
+.redes svg {
     width: 50px;
-    margin-right: 1rem;
     fill: #333;
 }
 
-svg:hover {
+.redes svg:hover {
     fill: #6f2dbd;
 }
 
