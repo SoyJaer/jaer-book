@@ -21,13 +21,16 @@ body {
 .header {
     background-color: #fff;
     height: 80px;
-    position: fixed;
-    /* Fija el header en la parte superior */
+    position: fixed; /* Fija el header en la parte superior */
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 100;
-    /* Asegura que esté por encima de otros elementos */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+    background: rgba(255, 255, 255, 0.1); /* 1. Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* 2. El desenfoque clave del fondo */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 3. Borde sutil para dar profundidad */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* 4. Sombra suave para levantar el elemento */
 }
 
 .nav {
